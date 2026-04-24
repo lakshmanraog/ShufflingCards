@@ -1,5 +1,6 @@
-namespace Blackbaud.Interview.Cards;
 
+namespace Cards;
+using System;
 /// <summary>
 /// Possible values for a card suit.
 /// </summary>

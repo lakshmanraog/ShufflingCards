@@ -1,49 +1,10 @@
-namespace Blackbaud.Interview.Cards;
+namespace Cards;
 
-/// <summary>
-/// A single card, with a suit and rank
-/// </summary>
-public record Card
-{
-    /// <summary>
-    /// The rank of this card
-    /// </summary>
-    public Rank Rank { get; init; }
-
-    /// <summary>
-    /// The suit of this card
-    /// </summary>
-    public Suit Suit { get; init; }
-
-    /// <summary>
-    /// Creates a new card.
-    /// </summary>
-    /// <param name="rank"></param>
-    /// <param name="suit"></param>
-    public Card(Rank rank, Suit suit)
-    {
-        Rank = rank;
+public class Card {
+    public string Suit { get; }
+    public string Rank { get; }
+    public Card(string suit, string rank) {
         Suit = suit;
+        Rank = rank;
     }
-
-    /// <summary>
-    /// Returns a string representation of this card as {Rank} of {Suit}
-    /// </summary>
-    /// <returns></returns>
-    public override string ToString()
-    {
-        return $"{Rank} of {Suit}";
-    }
-
-    /// <summary>
-    /// Returns an abbreviated string representation of this card as {R}{S}
-    /// </summary>
-    /// <returns></returns>
-    public string ToShortString()
-    {
-        var shortRank = Rank.ToShortString();
-        var shortSuit = Suit.ToShortString();
-        return $"{shortRank}{shortSuit}";
-    }
-
 }
